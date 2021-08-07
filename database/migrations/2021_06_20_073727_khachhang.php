@@ -20,7 +20,8 @@ class Khachhang extends Migration
             $khachhang->string('passWord', 50);
             $khachhang->char('sdt', 10);
             $khachhang->text('diaChi');
-            $khachhang->boolean('gioiTinh');
+            $khachhang->boolean('gioiTinh')->nullable();
+            $khachhang->text('anh')->nullable();
         });
     }
 

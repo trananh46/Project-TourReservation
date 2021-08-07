@@ -16,9 +16,9 @@ class Nhanvien extends Migration
         Schema::create('nhanvien', function (Blueprint $nhanvien) {
             $nhanvien->increments('idNhanVien');
             $nhanvien->string('nameNhanVien', 100);
-            $nhanvien->string('userName', 100);
+            $nhanvien->string('email', 100);
             $nhanvien->string('passWord', 50);
-            $nhanvien->char('sđt', 10);
+            $nhanvien->char('sdt', 10)->nullable();
             $nhanvien->unsignedInteger('quyen');
             $nhanvien->foreign('quyen')->references('idQuyen')->on('quyen');
         });

@@ -16,6 +16,7 @@ class Diadiem extends Migration
         Schema::create('diadiem', function (Blueprint $diadiem) {
             $diadiem->increments('idDiaDiem');
             $diadiem->string('tenDiaDiem', 100);
+            $diadiem->text('anh');
         });
     }
 

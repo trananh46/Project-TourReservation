@@ -17,7 +17,7 @@ class Tour extends Migration
             $tour->increments('idTour');
             $tour->string('nameTour', 100);
             $tour->text('tieuDe');
-            $tour->text('anh');
+            $tour->text('anhTour');
             $tour->string('diemXuatPhat', 100);
             $tour->string('diemDen', 100);
             $tour->date('ngayKhoiHanh');
@@ -25,10 +25,14 @@ class Tour extends Migration
             $tour->integer('soLuongNguoi');
             $tour->integer('giaNguoiLon');
             $tour->integer('giaTreEm');
-            $tour->integer('ghiChu');
+            $tour->text('gioiThieu');
             $tour->tinyInteger('trangThai');
-            $tour->unsignedInteger('idNhanVien');
-            $tour->foreign('idNhanVien')->references('idNhanVien')->on('nhanvien');
+            $tour->unsignedInteger('idMayBay');
+            $tour->unsignedInteger('idKhachSan');
+            $tour->foreign('idMayBay')->references('idMayBay')->on('maybay');
+            $tour->foreign('idKhachSan')->references('idKhachSan')->on('khachsan');
+            // $tour->unsignedInteger('idNhanVien');
+            // $tour->foreign('idNhanVien')->references('idNhanVien')->on('nhanvien');
         });
     }
 

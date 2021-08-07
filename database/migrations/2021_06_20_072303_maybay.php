@@ -17,6 +17,8 @@ class Maybay extends Migration
             $maybay->increments('idMayBay');
             $maybay->string('nameMayBay', 50);
             $maybay->string('hangMayBay', 50);
+            $maybay->text('anh');
+            $maybay->text('gioiThieuHang');
         });
     }
 

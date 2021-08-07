@@ -17,6 +17,7 @@ class Khachsan extends Migration
             $khachsan->increments('idKhachSan');
             $khachsan->string('nameKhachSan', 100);
             $khachsan->text('mieuTa');
+            $khachsan->text('anh');
         });
     }
 
