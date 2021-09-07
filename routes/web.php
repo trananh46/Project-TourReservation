@@ -40,8 +40,6 @@ use Illuminate\Support\Facades\Route;
 
 /* Phần ADMIN */
 
-
-
 Route::middleware([CheckHasLoginADMIN::class])->group(function () {
     Route::get('/loginADMIN', [AuthenticateADMINController::class, 'login'])->name('loginADMIN');
     Route::post('/login-processADMIN', [AuthenticateADMINController::class, 'loginProcess'])->name('login-process');
@@ -59,7 +57,8 @@ Route::middleware([CheckLoginADMIN::class])->group(function () {
     Route::resource('destination', 'DiaDiemController');
     Route::resource('customer', 'CustomerController');
     Route::resource('manageTour', 'ManageTourController');
-
+    Route::resource('profit', 'ProfitController');
+    Route::resource('listTourBasedMonth', 'TourBasedMonth');
     Route::resource('listCustomerTour', 'ListCustomerTourController');
 
     Route::resource('imageDetail', 'ImageDetailController');

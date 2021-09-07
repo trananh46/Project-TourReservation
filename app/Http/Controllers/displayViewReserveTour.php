@@ -106,7 +106,7 @@ class displayViewReserveTour extends Controller
         $sdt = $request->get('sdt');
         $soLuongNguonLon = $request->get('so-nguoiLon');
         $soLuongTreEm = $request->get('so-treEm');
-        $ngayDatTour = date("d/m/y");
+        $ngayDatTour = date("y/m/d");
         $ghiChu = $request->get('ghi-chu');
         $trangThai = 0;
         $tongTien = $request->get('tong-tien');

@@ -90,6 +90,12 @@
                     <p>REVIEW & POST</p>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('profit.index') }}">
+                    <i class="ti-panel"></i>
+                    <p>PROFIT</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
